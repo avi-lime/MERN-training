@@ -1,22 +1,22 @@
-< > - starting tag <br>
+< > - starting tag
 </ > - ending tag
 
 - starting tag and ending tag make an _element_
-eg. \<html> \</html>
+eg. <html> </html>
 
-## Tags in \<head>
-- \<meta> - Data about the website.
-- \<style>
-- \<link>
+## Tags in <head>
+- <meta> - Data about the website.
+- <style>
+- <link>
 etc.
 
-### Difference between \<b> and \<strong>
-- \<strong> is a semantics tag
+### Difference between <b> and <strong>
+- <strong> is a semantics tag
 - It will make the text bolder if the default text is already bold
 
-\<b> vs \<strong> <br>
-\<i> vs \<em> <br>
-\<u> vs \<ins> <br>
+<b> vs <strong>
+<i> vs <em>
+<u> vs <ins>
 
 - ins is used with del
 
@@ -27,7 +27,7 @@ etc.
 - A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
 
 
-### target attribute in \<a>
+### target attribute in <a>
 
 Used in iframes
 - _blank -> new page
