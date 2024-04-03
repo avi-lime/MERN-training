@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
+body {
+    padding: 20px;
+}
+
 .parent {
     font-size: 16px;
 }
 
 .child {
     font-size: 2em;
+
 }
 
 .btn {
@@ -28,6 +33,13 @@
     width: 10em;
 }
 
+.overflow {
+    background-color: blue;
+    height: 100px;
+    overflow: scroll;
+    width: 50px;
+}
+
 .btn-small {
     font-size: 20px;
     /* padding: 8px; */
@@ -40,3 +52,34 @@
     transition: all 0.5s;
 
 }
+
+ol {
+    list-style-type: lower-greek;
+}
+
+.parent-10 {
+    ol {
+        background-color: violet;
+    }
+
+    ul:first-child {
+        background-color: orange;
+    }
+
+    ul:last-child {
+        background-color: green;
+
+        li:nth-child(2) {
+            background-color: orange;
+        }
+    }
+
+    li:first-of-type {
+        background-color: red;
+    }
+
+    li:nth-of-type(2) {
+        background-color: yellow;
+    }
+}
+

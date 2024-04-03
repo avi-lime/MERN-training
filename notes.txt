@@ -69,8 +69,9 @@ margin-block, margin-inline;
 
 
 ## border-boxing
-conten-box -> width = content
+content-box -> width = content
 border-box -> width = border (l & r) + content + Padding
+-> height = border (t & b) + content + Padding
 
 ## center a div
 -> (should be a block, display: block)
@@ -83,7 +84,38 @@ border-box -> width = border (l & r) + content + Padding
 --> in case of font-size: parent element
 --> any other case: itself
 3. rem - root em - relative to the font size of root element (<html>)
+4. vh - view height - relative to viewport height
+5. vw - view width - relative to viewport width
+6. % - relative to immediate parent
 
 
---- Git ---
+## Pseudo
 
+: -> Pseudo Classes
+:: -> Pseudo Elements
+
+:first-child
+:last-child
+:nth-child(n)
+:nth-last-child(n)
+
+:first-of-type
+:last-of-type
+:nth-of-type(n)
+
+## Selectors
+
+space - descendant selector (all elements in an element)
+> - direct child selector
++ - adjacent sibling selector
+
+## FlexBox
+display: flex
+-> flex-direction
+-> flex-wrap
+-> align-items
+-> align-content
+-> align-self
+-> justify-content
+-> justify-self
+-> order
