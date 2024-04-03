@@ -1,3 +1,5 @@
+--- DAY 1 | HTML ---
+
 < > - starting tag
 </ > - ending tag
 
@@ -44,7 +46,7 @@ Used in iframes
 
 
 
---- Day 2 ---
+--- Day 2 | CSS ---
 
 heading-two : kebab-case -> CSS
 headingTwo : camelCase -> JS
@@ -81,3 +83,7 @@ border-box -> width = border (l & r) + content + Padding
 --> in case of font-size: parent element
 --> any other case: itself
 3. rem - root em - relative to the font size of root element (<html>)
+
+
+--- Git ---
+
