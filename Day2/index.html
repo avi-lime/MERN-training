@@ -5,18 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day2</title>
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* internal styling */
+        body {
+            background-color: #1b1b1b;
+        }
+
+        div {
+            color: white;
+            background-color: orange;
+            text-decoration: wavy underline;
+            text-transform: uppercase;
+            font-size: xx-large;
+            text-align: center;
+            margin-block: 10px;
+        }
+
+        #heading {
+            background-color: blue;
+        }
+
+        .heading-two {
+            background-color: green;
+        }
+
+        /* class nesting */
+        .parent-class .child-class {
+            background-color: red;
+        }
+    </style>
 </head>
 
-<body>
+<body style="background-color: #1b1b1b">
     <!-- inline styling -->
 
     <div style="
+        color: white;
         background-color: orange;
         text-decoration: wavy underline;
         text-transform: uppercase;
         font-size: xx-large;
         text-align: center;
     "> Hello World </div>
+
+    <div id="heading">
+        Heading
+    </div>
+
+    <div class="heading-two">Class 1</div>
+    <div class="heading-two">Class 2</div>
+
+    <div class="parent-class">
+        <div class="child-class">
+            Child
+        </div>
+    </div>
+
+    <div class="parent">
+        <p>Hello</p>
+        <span>Hello</span>
+    </div>
 </body>
 
 </html>

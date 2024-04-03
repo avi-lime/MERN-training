@@ -18,16 +18,17 @@ etc.
 <i> vs <em>
 <u> vs <ins>
 
-- ins is used with del
+- <ins> is used with <del>
 
 
 ### Block vs Inline
 - A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.
-
 - A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
 
+- An inline element does not start on a new line.
+- An inline element only takes up as much width as necessary.
 
-### target attribute in <a>
+### Target attribute in <a>
 
 Used in iframes
 - _blank -> new page
@@ -40,3 +41,35 @@ Used in iframes
 
 - Why index?
 - Why does h5 and h6 exist
+
+
+
+--- Day 2 ---
+
+heading-two : kebab-case -> CSS
+headingTwo : camelCase -> JS
+heading_two : snake_case -> Python
+HeadingTwo : PascalCase -> React
+
+
+## Margin and Padding
+
+margin: 16px; -> all;
+margin: 20px 10px 5px 15px; -> top right bottom left;
+margin: 20px 10px; -> top&bottom left&right;
+margin: 20px 10px 30px; -> top right&left bottom;
+
+OR 
+margin-left, margin-right, margin-top, margin-bottom;
+margin-block, margin-inline;
+
+~ Same for Padding
+
+
+## border-boxing
+conten-box -> width = content
+border-box -> width = border (l & r) + content + Padding
+
+## center a div
+-> (should be a block, display: block)
+-> margin: 0 auto; / margin-inline: auto;

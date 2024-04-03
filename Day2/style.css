@@ -1,0 +1,26 @@
+div {
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid red;
+
+    width: 300px;
+
+    box-sizing: border-box;
+}
+
+.parent-class {
+    & .child-class {
+        color: black;
+        width: 50%;
+    }
+}
+
+.parent {
+    & p {
+        color: red;
+    }
+
+    & span {
+        color: blue;
+    }
+}
