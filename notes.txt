@@ -76,3 +76,8 @@ border-box -> width = border (l & r) + content + Padding
 
 
 ## CSS UNITS
+1. px - pixel - absolute value - 1/96 inch
+2. em - relative to the font size of -
+--> in case of font-size: parent element
+--> any other case: itself
+3. rem - root em - relative to the font size of root element (<html>)
