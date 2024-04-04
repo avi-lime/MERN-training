@@ -31,3 +31,75 @@ Chrome -> v8 engine
 Firefox -> Spider Monkey
 Edge -> Chakra
 -> ECMAScript - Sets standards for JavaScript for comptability eg. ES6
+
+
+JavaScript is _______ & _______ Programming Language;
+
+a. _loosely typed_ / strictly typed
+b. _dynamically typed_ / static
+
+Hoisting:
+-> Reads the whole code once before execution
+
+
+Datatypes:
+
+String
+Number
+Bigint
+Boolean
+Undefined - not asigned
+Null - asigned Null
+Object -> Array, Date 
+
+Array is mutable
+String is not mutable
+
+parseInt() 
+Number()
+
+== vs ===
+!= vs !==
+
+only value VS value + datatype 
+in case of non primitive dtype: reference is checked
+
+False Values in JS:
+0, false, null, undefined, ''
+
+Functions:
+
+// function declaration
+
+function print() {
+    console.log('--');
+}
+
+// function declaration ( named )
+
+const a = function print() {
+    console.log('--');
+}
+
+// function declaration ( anonymous )
+
+const b = function () {
+    console.log('--');
+}
+
+// Functions don't throw Error when using the same name for 2 functions, It overwrites.
+
+// Arrow function
+
+const c = () => {
+    console.log('--')
+}
+
+## Object
+
+key-value pairs
+
+
+## Questions
+
+-> How many ways to return a value from an arrow function
