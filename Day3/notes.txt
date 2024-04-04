@@ -1,0 +1,14 @@
+--- Day 3 ---
+CSS Continues...
+
+## Grid
+
+grid-template-columns
+grid-template-rows
+grid-columns
+grid-rows
+
+grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+
+repeat -> (a, b) -> a = number of elements, b = size
+minmax -> min and max values possible
