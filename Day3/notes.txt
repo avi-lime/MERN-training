@@ -12,3 +12,22 @@ grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
 
 repeat -> (a, b) -> a = number of elements, b = size
 minmax -> min and max values possible
+
+
+## Position
+
+static - default
+relative - relative to surrounding elements
+absolute - from the root element
+fixed - will be fixed even on scroll
+sticky - will stick to the position once scrolled to it
+
+
+JAVASCRIPT !!
+
+-> Programming language, gives functionality to the website.
+-> Browsers have engines to run JavaScript
+Chrome -> v8 engine
+Firefox -> Spider Monkey
+Edge -> Chakra
+-> ECMAScript - Sets standards for JavaScript for comptability eg. ES6
