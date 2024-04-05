@@ -1,6 +1,6 @@
 --- Day 4 | JS ---
 
-Objects:
+## Objects:
 
 -> Cannot reassign const Objects
 -> But can change object members
@@ -40,4 +40,41 @@ Array.isArray(arr)
 
 
 
--> map, array, reduce, filter, sort
+-> map, array, reduce, filter, sort, forEach
+
+## For loops in JS
+
+for (let i = 0; i < 5; i++)
+
+-> for of loop
+- Used for arrays
+for (let i of arr)
+
+-> for in loop
+- Used for Objects
+for (let key of obj)
+
+
+# Document Object Model (DOM)
+
+-> It's an API (Application Program Interface) that can be used in JavaScript
+-> It's not a part of JavaScript
+-> It's a Tree Model of all the elements (as Objects) in the HTML Document
+
+=> Window Object
+
+-> Represents an open window in a browser
+-> It is a Global object
+
+console.log() is a Window method
+- window.console.log()
+- console.log(console)
+
+height, width, innerHeight, innerWidth etc are properties
+- window.height, window.width
+
+### Class
+
+properties -> variables
+methods -> function
+
