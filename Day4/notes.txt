@@ -93,5 +93,8 @@ methods -> function
 
 ## Events in JavaScript
 
--> Events are things that happen in the system, like user interactions
+-> Events are things that happen in the system
+-> It can be something done by the browser or the user.
+eg. button click, page load etc.
+
 
