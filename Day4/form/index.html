@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-div">
+        <form action="" onsubmit="display(event)">
+            <div class="form-element">
+                <label for="userName">Name: </label>
+                <input type="text" name="userName" onkeyup="nameChange(event)" autocomplete="nickname"
+                    placeholder="Enter name" id="userName">
+            </div>
+            <div class="form-element">
+                <label for="userEmail">Email: </label>
+                <input type="email" name="userEmail" autocomplete="email" placeholder="Enter Email" id="userEmail">
+
+            </div>
+            <div class="form-element">
+
+                <label for="userPassword">Password: </label>
+                <input autocomplete="current-password" type="password" name="userPassword" placeholder="Enter Password"
+                    id="userPassword">
+            </div>
+            <div class="form-element">
+
+                <label for="userGender">Gender: </label>
+                <input type="radio" name="userGender" id="male" value="Male"> <label for="male">Male</label>
+                <input type="radio" name="userGender" id="female" value="Female"> <label for="female">Female</label>
+            </div>
+
+            <div class="form-element">
+                <label for="userHobbies">Hobbies: </label>
+                <input type="checkbox" name="userHobbies" id="reading" value="Reading"> <label
+                    for="reading">Reading</label> <br>
+                <input type="checkbox" name="userHobbies" id="writing" value="Writing"> <label
+                    for="writing">Writing</label> <br>
+                <input type="checkbox" name="userHobbies" id="coding" value="Coding"> <label for="coding">Coding</label>
+            </div>
+            <div class="form-element">
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="display">
+        <h2>User Details</h2>
+        <p id="name">Name: </p>
+        <p id="email">E-mail: </p>
+        <p id="password">Password: </p>
+        <p id="hobbies">Hobbies: </p>
+        <p id="gender">Gender: </p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

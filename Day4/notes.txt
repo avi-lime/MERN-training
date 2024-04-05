@@ -98,3 +98,8 @@ methods -> function
 eg. button click, page load etc.
 
 
+
+
+### Event Delegation
+
+-> Instead of attaching an Event Listener to all the buttons/child nodes, assign a single Event listener to the parent element
