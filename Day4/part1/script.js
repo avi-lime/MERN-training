@@ -51,23 +51,34 @@ const obj = {
 
 // console.dir(window.document)
 
-const res = document.getElementsByTagName("div")
+// const res = document.getElementsByTagName("div")
 
-console.log(res)
+// console.log(res)
 
-const ht1 = document.getElementById("ht1")
-const ht2 = document.getElementById("ht2")
+// const ht1 = document.getElementById("ht1")
+// const ht2 = document.getElementById("ht2")
 
-console.log(ht1, ht2)
+// console.log(ht1, ht2)
 
-const t1 = document.getElementById("t1")
+// const t1 = document.getElementById("t1")
 
-console.log(t1)
+// console.log(t1)
 
-// querySelector
-const ht3 = document.querySelector("#ht3")
-console.log(ht3)
+// // querySelector
+// const ht3 = document.querySelector("#ht3")
+// console.log(ht3)
 
-// querySelectorAll
-const ht = document.querySelectorAll(".ht")
-console.log(ht)
+// // querySelectorAll
+// const ht = document.querySelectorAll(".ht")
+// console.log(ht)
+
+const newChild = document.createElement("p");
+newChild.innerText = "Helloooooo";
+
+const parent = document.getElementsByTagName("div");
+parent[0].appendChild(newChild);
+
+let el = document.getElementsByTagName("p")[2];
+
+el.removeChild(el.childNodes[0])
+

@@ -78,3 +78,20 @@ height, width, innerHeight, innerWidth etc are properties
 properties -> variables
 methods -> function
 
+
+
+## document functions
+-> getElementById()
+-> getElementsByTagname()
+
+
+## element 
+
+-> cloneNode() [ Copies everything, inlcuding Element ID as well ]
+
+### deep copy vs shallow copy
+
+## Events in JavaScript
+
+-> Events are things that happen in the system, like user interactions
+
