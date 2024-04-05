@@ -1,0 +1,43 @@
+--- Day 4 | JS ---
+
+Objects:
+
+-> Cannot reassign const Objects
+-> But can change object members
+
+eg.
+const obj = {
+    "name": "Avi",
+    "age": 21
+}
+
+obj.lastName = "Singh" // [O]
+obj.age = 20 // [O]
+
+obj = {
+    "name": "Avinash"
+}   //  [X]
+
+
+Arrays:
+
+-> Arrays are Objects
+eg. const arr = [1, 2, 3]
+
+arr[10] = 20;
+// [1, 2, 3, empty x 7, 20]
+
+-> Push an element in the array
+arr.push(10);
+-> Pushes an element at the end of the array.
+
+
+## Array Methods
+
+Array.isArray(arr)
+
+// checks if `arr` is an Array or not, can be used to differ between Objects and Arrays
+
+
+
+-> map, array, reduce, filter, sort
