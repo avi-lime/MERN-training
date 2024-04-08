@@ -1,0 +1,9 @@
+--- Day 5 | JavaScript continues ---
+
+arr.forEach((a, b, c) => {
+    console.log(a, b , c)
+})
+
+-> a : current element
+-> b : current index
+-> c : whole array

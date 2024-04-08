@@ -1,5 +1,26 @@
 const display = (e) => {
     e.preventDefault();
+    // let userData = {
+    //     userHobbies: []
+    // }
+
+    // for (let i = 0; i < e.target.length; i++) {
+    //     let t = e.target[i];
+    //     let type = t.type;
+    //     let name = t.name;
+    //     let value = t.value;
+
+    //     if (type == 'submit') continue;
+    //     if (type == 'checkbox' && t.checked) {
+    //         userData[name].push(value);
+    //     }
+    //     if (type == 'radio' && t.checked) {
+    //         userData[name] = value;
+    //     }
+    //     userData[name] = value;
+
+    // }
+    // console.dir(userData);
     let name = document.getElementById('userName').value;
     let email = document.getElementById('userEmail').value;
     let password = document.getElementById('userPassword').value;
