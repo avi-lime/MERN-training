@@ -25,4 +25,6 @@ let arr = [2, 10, 21, 32]
 //     console.log(': ', a, b, c)
 // })
 
-arr.map()
+console.log('start')
+setTimeout(() => { console.log('hello') }, 2000)
+console.log('end')

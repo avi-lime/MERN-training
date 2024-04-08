@@ -7,3 +7,20 @@ arr.forEach((a, b, c) => {
 -> a : current element
 -> b : current index
 -> c : whole array
+
+
+
+# JavaScript Code Execution
+
+
+-> Call Stack
+line by line execution,
+first item: Global Execution Context
+all functions are pushed in the stack and executed in order
+
+-> Javascript waits for none.
+
+
+### setTimeout(callbackfn, time);
+
+-> setTimeout will send the callback function to stack after the given time, till then it's kept aside and normal execution continues.
