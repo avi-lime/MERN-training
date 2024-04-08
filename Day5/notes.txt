@@ -24,3 +24,79 @@ all functions are pushed in the stack and executed in order
 ### setTimeout(callbackfn, time);
 
 -> setTimeout will send the callback function to stack after the given time, till then it's kept aside and normal execution continues.
+
+
+# ASYNCHRONOUS JavaScript
+
+console.log("GEC Start")
+
+function printPretty() {
+    console.log('prettyStart')
+    let ans = 2 + 3;
+    console.log(ans)
+    console.log('prettyEnd')
+
+}
+
+setTimeout(printPretty, 3000) // Browser will keep this aside and execute after the given time
+
+console.log("GEC End")
+
+
+Call Stack
+
+Step 1.
+|              |
+|              |
+|              |
+|              |
+|--------------|
+|     GEC      |
+|______________|
+
+// After GEC Ends
+Step 2.
+|              |
+|              |
+|              |
+|              |
+|              |
+|              |
+|______________|
+
+// After 3 Seconds, prettyPrint is called
+Step 3. 
+|              |
+|              |
+|--------------|
+|     PP       |
+|--------------|
+|     GEC      |
+|______________|
+
+
+-> Synchronous means line by line execution
+-> Async means breaking from the flow of line by line execution
+
+-> setTimeout can be used when you know how much you need to wait before executing the Code
+-> Promise can be used for when you don't know the amount of time, but instead it's based on an event
+
+
+## Fetch API
+
+console("start")
+fetch(...)
+console("end")
+
+Step 1.
+|              |
+|              |
+|              |
+|              |
+|--------------|
+|     GEC      |
+|______________|
+
+Step 2. 
+fetch() will go to the URL and fetch the info in the background while the code keeps executing
+All the functions that require the data from fetch() will be kept on hold, rest will be executed immediately
