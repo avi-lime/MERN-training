@@ -1,0 +1,26 @@
+--- Day 7 | NodeJS ---
+
+## Internal Modules
+
+=> File System
+-> Synchronous API
+-> const fs = require('fs') // require('node:fs')
+
+fs.readFileSync()
+- "Sync" refers to the blocking behaviour of the main thread. i.e the program execution will be haulted till the file is read.
+
+-> Promises
+-> const fsPromises = require('fs/promises)
+
+const pr = fsPromises.readFile('myReadMe.txt', { encoding: 'utf-8' })
+pr.then(res => console.log(res))
+
+
+
+----------------------------
+
+https://www.amazon.com/products/electronics?pricelt=10000
+-----   -------------- -------------------  ------------
+protocol   origin              path            query
+
+URI vs url
