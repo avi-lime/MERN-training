@@ -1,0 +1,64 @@
+--- Day 6 | And More JS! ---
+
+cl("start")
+setTimeout(fn, 0)
+cl("end")
+
+## Event Loop
+
+High Priority -> Microtask Queue
+
+Low Priority -> Callback Queue
+
+
+<--- Code Execution --->
+
+line-by-line
+1st console log
+
+setTimeout is sent to call back queue till the main execution is over.
+As soon as the call stack is empty, the pending tasks are sent to the call stack
+
+--> Inversion of Control
+- Giving control to some other function
+
+
+=> Why Promises?
+
+
+----------------------------------
+<--- BACKEND!! --->
+
+
+Client - Server Architecture
+
+Client requests data from Server and the Server responds with the data/page which is then rendered by the browser
+
+Latency -> Time taken for the client request to reach the server and vice versa
+- Round Trip Latency = total time from client request to server response
+
+Processing Time -> Time taken by the server to process the request
+
+Response Time -> Round Trip Latency + Processing Time 
+
+Bandwidth -> Maximum Data that can be transferred through a channel
+
+Throughput -> The actual capacity of the data that can be transferred 
+
+
+http vs https:
+
+https encrypts the data packets
+https has SSL certificate
+
+http packets can be read by interceptors
+
+-----------------------
+IP Address, MAC Address
+Router, ISP, Internet
+DNS
+-----------------------
+
+NODE JS
+
+Read Evaluate Process Loop, REP Loop
