@@ -64,39 +64,8 @@ const fs = require('fs')
 
 const data = fs.readFileSync('products.json', { encoding: 'utf-8' })
 
-const htmlTemplate = `
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <style>
-
-                .products {
-                    display: grid;
-                    grid-template: auto / repeat(auto-fill, minmax(300px, 1fr));
-                }
-                .product-card {
-                    border: 1px solid #000;
-                    padding: 10px;
-                    margin: 10px;
-                    width: 300px;
-                    display: inline-block;
-                }
-
-            </style>
-        </head>
-        <body>
-            <div class='products'>
-            __PRODUCT__CARDS__
-            </div>
-        </body>
-    </html>
-`
-const cardTemplate = `
-    <div class='product-card'>
-        <h2>__TITLE__</h2>
-        <p>__INFO__</p>
-    </div>
-`
+const htmlTemplate = fs.readFileSync('Templates/page.html', { encoding: 'utf-8' })
+const cardTemplate = fs.readFileSync('Templates/card.html', { encoding: 'utf-8' })
 
 let products = ""
 
