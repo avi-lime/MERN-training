@@ -87,6 +87,7 @@ JSON.parse(data).products.forEach(product => {
     const card = cardTemplate
         .replace('__TITLE__', product.title)
         .replace('__INFO__', product.description)
+        .replace('__IMG__URL__', product.thumbnail)
     products += card
 })
 
