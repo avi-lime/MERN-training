@@ -88,6 +88,7 @@ JSON.parse(data).products.forEach(product => {
         .replace('__TITLE__', product.title)
         .replace('__INFO__', product.description)
         .replace('__IMG__URL__', product.thumbnail)
+        .replace('__ID__', product.id)
     products += card
 })
 
