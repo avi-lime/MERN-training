@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Page</title>
+    <style>
+        * {
+            text-align: center
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="txtSearch">
+    $_PRODUCTS_$
+
+
+    <script>
+        let txtSearch = document.getElementById('txtSearch');
+
+        txtSearch.addEventListener('keyup', () => {
+            let products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                let productName = product.querySelector('h3').innerText;
+                if (productName.toLowerCase().includes(txtSearch.value.toLowerCase())) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            })
+        })
+
+    </script>
+</body>
+
+</html>

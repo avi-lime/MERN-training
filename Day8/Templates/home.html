@@ -1,0 +1,23 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input type="text" id="txtSearch">
+    <button onclick="search()">Search</button>
+
+    <script>
+
+        function search() {
+            let txtSearch = document.getElementById('txtSearch').value;
+
+            window.location = '/products?q=' + txtSearch;
+            console.log(txtSearch);
+        }
+    </script>
+
+</body>
+
+</html>
