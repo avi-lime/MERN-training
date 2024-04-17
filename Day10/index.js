@@ -36,12 +36,12 @@ app.use('/api/users', userRouter)
 //     .delete(deleteUser)
 //     .put(updateUser)
 
-app.get('/products', async (req, res) => {
-    const { id, name } = req.query;
-    console.log()
-    const products = await fetchProducts({ id, name })
-    res.json(products)
-});
+// app.get('/products', async (req, res) => {
+//     const { id, name } = req.query;
+//     console.log()
+//     const products = await fetchProducts({ id, name })
+//     res.json(products)
+// });
 
 // FIRST LEVEL ABSTRACTION
 
