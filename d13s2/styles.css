@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    height: 32px;
+    background-color: black;
+}
+
+.category-row {
+    height: 50px;
+    background-color: black;
+}
