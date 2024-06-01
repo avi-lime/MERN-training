@@ -4,8 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import HomePage from './pages/HomePage/HomePage'
 import ImageGenerator from './pages/ImageGenerator/ImageGenerator'
-import Navbar from './pages/Navbar/Navbar'
 import History from './pages/History/History'
+import HistoryPage from './pages/HistoryPage/HistoryPage'
+import HistoryInformationPage from './pages/HistoryInformationPage/HistoryInformationPage'
 const parent = document.getElementById('root')
 const root = ReactDOM.createRoot(parent)
 
@@ -20,7 +21,11 @@ const router = createBrowserRouter([
     },
     {
         path: '/history',
-        element: <History />
+        element: <HistoryPage />
+    },
+    {
+        path: '/history/:historyId',
+        element: <HistoryInformationPage />
     },
     {
         path: '/contact',
