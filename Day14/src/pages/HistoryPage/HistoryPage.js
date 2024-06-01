@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../Navbar/Navbar'
 import './HistoryPage.css'
 import { Link } from 'react-router-dom'
+import HistoryCard from './HistoryCard'
 
 const HistoryPage = () => {
     const [data, setData] = useState([])
@@ -29,13 +30,7 @@ const HistoryPage = () => {
             <div className='history-main-container'>
                 {
                     data.map(item => {
-                        return (
-                            <div key={item.id} className='history-item'>
-                                <h3>{item.title}</h3>
-                                <p>{item.description}</p>
-                                <Link to={`/history/${item.id}`}>more...</Link>
-                            </div>
-                        )
+                        return <HistoryCard key={item.id} item={item} />
                     })
                 }
             </div>

@@ -14,8 +14,19 @@ const ImageGenerator = () => {
     const getData = async () => {
         const query = document.getElementById('txtQuery').value
         if (!query) return
-        const res = await fetch(`https://source.unsplash.com/random/500x500/?${query}`);
-        setData(res.url)
+        // const res = await fetch(`https://source.unsplash.com/random/500x500/?${query}`);
+        const res = await fetch(`http://localhost:1010/api/v1/images`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ searchText: query }),
+        });
+        const d = await res.json();
+        console.log(d);
+        // setData(res.url)
+
+        if (d?.status === 'success') {
+            setData(d.data.url)
+        }
     }
 
 
