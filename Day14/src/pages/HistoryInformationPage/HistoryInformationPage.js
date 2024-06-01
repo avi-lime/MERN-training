@@ -26,7 +26,7 @@ const HistoryInformationPage = () => {
 
     return (
         <div>
-            <Navbar />
+            <Navbar page="history" />
             <div style={customStyles}>
                 <h2 style={{
                     marginBottom: '20px'

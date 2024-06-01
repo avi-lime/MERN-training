@@ -32,7 +32,7 @@ const ImageGenerator = () => {
 
     return (
         <>
-            <Navbar />
+            <Navbar page="image" />
             <div className='image-generator-main-container'>
                 <h2>Image Generator</h2>
                 <div>

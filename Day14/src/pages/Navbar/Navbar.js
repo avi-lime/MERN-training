@@ -2,15 +2,31 @@ import React from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = (props) => {
+    const activeStyle = {
+        color: 'red',
+        textDecoration: 'underline'
+    }
+
+    const links = [
+        { key: 'home', url: '/', name: 'Home' },
+        { key: 'image', url: '/image-generator', name: 'Image Generator' },
+        { key: 'history', url: '/history', name: 'History' },
+        { key: 'contact', url: '/contact', name: 'Contact' },
+        { key: 'help', url: '/help', name: 'Help' },
+        { key: 'orders', url: '/orders', name: 'Orders' }
+    ]
+
     return (
         <div className='header-container'>
             <div className='left'>
-                <Link to='/'>Home</Link>
-                <Link to='/image-generator'>Image Generator</Link>
-                <Link to='/history'>History</Link>
-                <Link to='/contact'>Contact</Link>
-                <Link to='/help'>Help</Link>
+                {
+                    links.map(link => {
+                        return (
+                            <Link key={link.key} style={props.page === link.key ? activeStyle : {}} to={link.url}>{link.name}</Link>
+                        )
+                    })
+                }
             </div>
             <div className='right'>
 

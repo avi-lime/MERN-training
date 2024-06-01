@@ -24,7 +24,7 @@ const HistoryPage = () => {
 
     return (
         <div>
-            <Navbar />
+            <Navbar page="history" />
             <input type='text' onChange={(e) => setSearch(e.target.value)} />
             <div className='history-main-container'>
                 {
