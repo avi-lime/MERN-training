@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './ImageGenerator.css'
 import Navbar from '../Navbar/Navbar';
+import PointsContext from '../../context/pointsContext';
 
 const ImageGenerator = () => {
     const [data, setData] = useState("");
+    const points = useContext(PointsContext)
     // const [query, setQuery] = useState("");
 
     /* Can also generate a random query at start */
@@ -15,17 +17,21 @@ const ImageGenerator = () => {
         const query = document.getElementById('txtQuery').value
         if (!query) return
         // const res = await fetch(`https://source.unsplash.com/random/500x500/?${query}`);
+
+
         const res = await fetch(`http://localhost:1010/api/v1/images`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ searchText: query }),
         });
         const d = await res.json();
-        console.log(d);
-        // setData(res.url)
+
+        // console.log(d);
+        // setData(d.data.url)
 
         if (d?.status === 'success') {
             setData(d.data.url)
+            points.setUserPoints(points.userPoints - 1)
         }
     }
 

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
+import PointsContext from '../../context/pointsContext'
 
 const Navbar = (props) => {
     const activeStyle = {
@@ -43,8 +44,8 @@ const Navbar = (props) => {
                 
                 */}
             </div>
-            <div className='right'>
-
+            <div className='right' style={{ color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '20px' }}>
+                {useContext(PointsContext).userPoints}
             </div>
         </div>
     )

@@ -7,15 +7,20 @@ import HistoryCard from './HistoryCard'
 const HistoryPage = () => {
     const [data, setData] = useState([])
     const [search, setSearch] = useState('')
-
     const getData = async () => {
-        // const response = await fetch('https://dummyjson.com/products')
-        const response = await fetch(`https://dummyjson.com/products/search?q=${search}`)
-        const obj = await response.json()
-        let products = obj.products
-        // if (searchText)
-        //     products = products.filter(item => item.title.toLowerCase().startsWith(searchText.toLowerCase()))
-        setData(products)
+        try {
+            // const response = await fetch('https://dummyjson.com/products')
+            // const response = await fetch(`https://dummyjson.com/products/search?q=${search}`)
+            const response = await fetch(`http://localhost:1010/api/v1/images`)
+            const obj = await response.json()
+            // let products = obj.products
+            // let images = obj.images
+            // if (searchText)
+            //     products = products.filter(item => item.title.toLowerCase().startsWith(searchText.toLowerCase()))
+            setData(obj.data)
+        } catch (e) {
+            console.log(e)
+        }
     }
 
     useEffect(() => {
@@ -30,7 +35,8 @@ const HistoryPage = () => {
             <div className='history-main-container'>
                 {
                     data.map(item => {
-                        return <HistoryCard key={item.id} item={item} />
+                        console.log(item)
+                        return <HistoryCard key={item._id} item={item} />
                     })
                 }
             </div>
