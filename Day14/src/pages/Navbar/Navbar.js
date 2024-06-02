@@ -1,12 +1,19 @@
 import React, { useContext } from 'react'
 import './Navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import PointsContext from '../../context/pointsContext'
 
 const Navbar = (props) => {
     const activeStyle = {
         color: 'red',
         textDecoration: 'underline'
+    }
+    const navigate = useNavigate()
+
+    const logout = () => {
+        localStorage.removeItem('authToken')
+        ctx.setIsLoggedIn(false)
+        navigate('/login')
     }
 
     // const linksObj = {
@@ -23,7 +30,11 @@ const Navbar = (props) => {
         { key: 'history', url: '/history', name: 'History' },
         { key: 'contact', url: '/contact', name: 'Contact' },
         { key: 'help', url: '/help', name: 'Help' },
+        { key: 'signup', url: '/signup', name: 'Sign Up' },
+        { key: 'login', url: '/login', name: 'Login' },
     ]
+
+    const ctx = useContext(PointsContext)
 
     return (
         <div className='header-container'>
@@ -45,7 +56,14 @@ const Navbar = (props) => {
                 */}
             </div>
             <div className='right' style={{ color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '20px' }}>
-                {useContext(PointsContext).userPoints}
+                {ctx.userPoints}
+            </div>
+            <div>
+                {
+                    ctx.isLoggedIn ?
+                        <button onClick={logout}>Logout</button> :
+                        <button onClick={() => navigate('/login')}>Login</button>
+                }
             </div>
         </div>
     )

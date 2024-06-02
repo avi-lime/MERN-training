@@ -11,7 +11,14 @@ const HistoryPage = () => {
         try {
             // const response = await fetch('https://dummyjson.com/products')
             // const response = await fetch(`https://dummyjson.com/products/search?q=${search}`)
-            const response = await fetch(`http://localhost:1010/api/v1/images`)
+            const response = await fetch(`http://localhost:1010/api/v1/images`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    "Authorization": "Bearer " + localStorage.getItem('authToken')
+                },
+
+            })
             const obj = await response.json()
             // let products = obj.products
             // let images = obj.images

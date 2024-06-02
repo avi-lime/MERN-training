@@ -19,9 +19,12 @@ const ImageGenerator = () => {
         // const res = await fetch(`https://source.unsplash.com/random/500x500/?${query}`);
 
 
-        const res = await fetch(`http://localhost:1010/api/v1/images`, {
+        const res = await fetch(`${process.env.BACKEND_URL}/api/v1/images`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                "Authorization": "Bearer " + localStorage.getItem('authToken')
+            },
             body: JSON.stringify({ searchText: query }),
         });
         const d = await res.json();
